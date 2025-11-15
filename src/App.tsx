@@ -105,7 +105,7 @@ function App() {
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <h1 className="text-2xl font-bold text-gray-900">ABO</h1>
+            <h1 className="text-2xl font-bold text-gray-900">ABORIGINALS</h1>
             <div className="flex items-center gap-4">
               <button
                 onClick={() => setIsCartOpen(true)}
@@ -376,7 +376,7 @@ function App() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">ABO</h3>
+              <h3 className="text-2xl font-bold mb-4">ABORIGINALS</h3>
               <p className="text-gray-400">
                 Know who you are. Rediscover your heritage.
               </p>
@@ -417,7 +417,7 @@ function App() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-            <p>&copy; {new Date().getFullYear()} ABO. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} ABORIGINALS. All rights reserved.</p>
           </div>
         </div>
       </footer>
