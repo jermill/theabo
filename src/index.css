@@ -2,28 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  /* iOS Liquid Glass Effect */
+  .glass-card {
+    background: rgba(241, 239, 231, 0.7);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(112, 111, 107, 0.2);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(22, 22, 21, 0.1);
+    padding: 1.5rem;
+  }
+
+  .glass-button {
+    background: #161615;
+    color: #f1efe7;
+    border: 1px solid rgba(22, 22, 21, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .glass-button:hover {
+    background: #2d2d2c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px 0 rgba(22, 22, 21, 0.3);
+  }
+
+  .glass-button:active {
+    transform: translateY(0);
+  }
+}
+
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 0.3s ease-in-out;
-  }
-
-  .animate-fade-in-delay {
-    animation: fadeIn 0.8s ease-in-out 0.2s both;
-  }
-
-  .animate-fade-in-delay-2 {
-    animation: fadeIn 0.8s ease-in-out 0.4s both;
-  }
-
-  .animate-slide-in {
-    animation: slideIn 0.3s ease-out;
   }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -31,34 +49,31 @@
   }
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar */
+body {
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar - minimal */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
+  background: rgba(112, 111, 107, 0.3);
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgba(112, 111, 107, 0.5);
 }
